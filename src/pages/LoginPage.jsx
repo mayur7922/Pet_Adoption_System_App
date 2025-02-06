@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../provider/authProvider";
 import api from '../api/petAdoption'
+import backgroundImage from '../assets/image.png';
+
 
 const LoginPage = () => {
 
@@ -55,14 +57,17 @@ const LoginPage = () => {
 
   return (
     <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#fff",
-        padding: "20px",
-      }}
+    style={{
+      minHeight: "100vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      padding: "20px",
+    }}
     >
       <div
         style={{
@@ -141,7 +146,7 @@ const LoginPage = () => {
           style={{
             width: "100%",
             padding: "12px",
-            backgroundColor: "#007bff",
+            backgroundColor: "#48A6A7",
             color: "#fff",
             border: "none",
             borderRadius: "6px",
@@ -150,8 +155,8 @@ const LoginPage = () => {
             fontSize: "16px",
             transition: "background-color 0.3s",
           }}
-          onMouseOver={(e) => (e.target.style.backgroundColor = "#0056b3")}
-          onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
+          // onMouseOver={(e) => (e.target.style.backgroundColor = "#16404D")}
+          // onMouseOut={(e) => (e.target.style.backgroundColor = "#16404D")}
         >
           Login
         </button>
@@ -161,7 +166,7 @@ const LoginPage = () => {
           style={{
             width: "100%",
             padding: "12px",
-            backgroundColor: "#007bff",
+            backgroundColor: "#48A6A7",
             color: "#fff",
             border: "none",
             borderRadius: "6px",
@@ -170,8 +175,8 @@ const LoginPage = () => {
             fontSize: "16px",
             transition: "background-color 0.3s",
           }}
-          onMouseOver={(e) => (e.target.style.backgroundColor = "#0056b3")}
-          onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
+          // onMouseOver={(e) => (e.target.style.backgroundColor = "#16404D")}
+          // onMouseOut={(e) => (e.target.style.backgroundColor = "#16404D")}
         >
           Register
         </button>

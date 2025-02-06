@@ -4,6 +4,7 @@ import { useAuth } from "../provider/authProvider";
 import api from '../api/petAdoption';
 import { useNavigate } from 'react-router-dom';
 import PetCard from './PetCard';
+import backgroundImage from '../assets/image.png';
 
 const UserPets = () => {
   const navigate = useNavigate();
@@ -35,7 +36,8 @@ const UserPets = () => {
   }
 
   return (
-    <div style={{textAlign: 'center'}}>
+    <div>
+      <div style={{textAlign: 'center'}}>
       <UserNavbar />
       <div>
       <h1 style={styles.title}>Search Pets by Type</h1>
@@ -72,6 +74,7 @@ const UserPets = () => {
 
       
     </div>
+    </div>
   );
 };
 
@@ -84,7 +87,14 @@ const styles = {
     margin: 'auto',
     borderRadius: '10px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-    marginTop: '100px'
+    marginTop: '100px',
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
   },
   title: {
     fontSize: '24px',
@@ -113,7 +123,7 @@ const styles = {
   },
   button: {
     padding: '10px 20px',
-    backgroundColor: "#007bff",
+    backgroundColor: "#48A6A7",
     color: 'white',
     fontSize: '16px',
     border: 'none',

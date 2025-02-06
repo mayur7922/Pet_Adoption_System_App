@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../provider/authProvider";
 import api from '../api/petAdoption';
 import UserNavbar from './UserNavbar';
+import backgroundImage from '../assets/image.png';
 
 const UserPage = () => {
 
@@ -34,15 +35,20 @@ const UserPage = () => {
     
     const styles = {
       container: {
-        display: 'flex',
         flexDirection: 'column',
         paddingTop: '250px',
-        alignItems: 'center',
         height: '100vh',
         backgroundColor: '#f0f0f0',  // Background color for the page
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       },
       button: {
-        backgroundColor: "#007bff",
+        backgroundColor: "#48A6A7",
         color: 'white',
         fontSize: '18px',
         padding: '15px 30px',

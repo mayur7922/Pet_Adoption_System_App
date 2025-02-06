@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../provider/authProvider";
 import api from '../api/petAdoption'
 import AdminNavbar from "./AdminNavbar";
+import backgroundImage from '../assets/image.png';
 
 const AdminPage = () => {
 
@@ -44,11 +45,16 @@ const AdminPage = () => {
 
   const styles = {
     container: {
-      display: 'flex',
       justifyContent: 'center',
       paddingTop: '220px',
       height: '100vh',
       backgroundColor: '#f3f4f6',
+      minHeight: "100vh",
+      display: "flex",
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
     },
     content: {
       textAlign: 'center',

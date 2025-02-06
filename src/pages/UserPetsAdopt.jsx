@@ -88,7 +88,7 @@ const styles = {
     width: '200px',
   },
   button: {
-    backgroundColor: '#007BFF',  // Blue button
+    backgroundColor: '#48A6A7',  // Blue button
     color: 'white',
     padding: '10px 20px',
     border: 'none',
